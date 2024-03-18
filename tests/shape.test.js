@@ -2,11 +2,23 @@ const Shape = require('../lib/shape');
 
 describe('Shape', () => {
     describe('Instantiate', () => {
-        it ('should be instance of Shape class', () => {
+        it ('should be an instance of Shape class', () => {
             const shape = new Shape();
             expect(shape).toBeInstanceOf(Shape)
         })
     })
+})
+
+
+it ('should confirm text is 3 letters or less', () => {
+    const  cb = () => {
+        new Shape(
+        'Triangle',
+        'blue',
+        'ABCD',
+        'white')
+        }
+    expect(cb).toThrowError('Please enter 3 letters or less')
 })
 
 describe('Shape', () => {
@@ -14,7 +26,7 @@ describe('Shape', () => {
         it ('should set the shape properly', () => {
             const result = 'Triangle'
             const shape = new Shape(result);
-            expect(shape.shape).toBe(result)
+            expect(shape.shape).toEqual(result)
         })
     })
 })
@@ -26,7 +38,7 @@ describe('Shape', () => {
             const shape = new Shape(
                 'Triangle',
                 'blue');
-            expect(shape.shapeColor).toBe(color)
+            expect(shape.shapeColor).toEqual(color)
         })
     })
 })
@@ -40,23 +52,14 @@ describe('Shape', () => {
                 'blue',
                 'ABC'
             );
-            expect(shape.text).toBe(text)
+            expect(shape.text).toEqual(text)
         })
     })
 })
 
 describe('Shape', () => {
     describe('Validate text', () => {
-        it ('should confirm text is 3 letters or less', () => {
-            const text = 'ABCD'
-            const cb = () => {
-                new Shape(
-                'Triangle',
-                'blue',
-                'ABCD')
-                }
-            expect(cb.text).toThrowError('Please enter 3 letters or less')
-        })
+        
 
         it ('should confirm text is 3 letters or less', () => {
             const text = 'AB'
@@ -86,17 +89,30 @@ describe('Shape', () => {
     })
 })
 
-// describe('Shape', () => {
-//     describe('Validate textColor', () => {
-//         it ('should confirm the color is alphabets', () => {
-//             const textColor = 'W@hite'
-//             const shape = new Shape(
-//                 'Triangle',
-//                 'blue',
-//                 'ABC',
-//                 'W@hite'
-//             );
-//             expect(shape.textColor).toThrow('Must enter only # or alphabets (A,B,C,D,E,F) or 0-9')
-//         })
-//     })
-// })
+describe('Shape', () => {
+    describe('Validate textColor', () => {
+        const  cb = () => {
+            new Shape(
+            'Triangle',
+            'bluee',
+            'ABC',
+            'white')
+            }
+        expect(cb).toThrowError('Please enter a valid color')
+        })
+    })
+
+describe('Shape', () => {
+    describe('Validate textColor', () => {
+        const  cb = () => {
+            new Shape(
+            'Triangle',
+            'bluee',
+            'ABC',
+            'white')
+            }
+        expect(cb).toThrowError('Please enter a valid color')
+        })
+    })
+
+
