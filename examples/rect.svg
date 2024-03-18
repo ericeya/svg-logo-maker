@@ -1,5 +1,4 @@
 <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-    <!-- <circle cx="100" cy="100" r="95" fill="transparent" stroke="red" stroke-width="5"/> -->
     <rect x='49' y='0' width='200' height='200' stroke='red' fill='red'/>
     <text x='49%' y='53%' fill='white' font-weight='bold' font-size='100' dominant-baseline='middle' text-anchor='middle'>SVC</text>
 </svg>
