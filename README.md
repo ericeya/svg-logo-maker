@@ -11,9 +11,9 @@ This is a simple terminal app program that will help the user create a svg file 
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Live Demo](#live-demo)
 * [License](#license)
 * [Contributing](#contributing)
-* [Tests](#tests)
 * [Questions](#questions)
 
 # Installation
@@ -28,6 +28,21 @@ npm i inquirer@8.2.4
 
 Please use this for simple shape of Circle, Triangle, Square logo with three letter text in it. It could also be used for less than 3 letter for texts!
 
+## Live-demo
+ 
+Please click [here](https://youtu.be/VMcdUoN5GhQ) for a live demo!
+
+Easy to use! Just type in node index.js in the terminal and answer the prompted questions :<br>
+<p align='center'>
+<img src="./images/svg-logo-gify1.gif"/>
+</p>
+<br>
+Then an image is generated with the text and colors used for your logo in the examples folder : <br>
+<p align='center'>
+<img src="./images/svg-logo-gify2.gif"/>
+</p>
+
+
 # License
 
 Licensed by MIT License
@@ -36,9 +51,6 @@ Licensed by MIT License
 
 Any contributions, remarks, questions, or feature requests are welcome.
 
-# Tests
-
-Please run node index.js when you open the terminal on the root project folder.
 
 # Questions
 
