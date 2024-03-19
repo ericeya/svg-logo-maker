@@ -58,11 +58,11 @@ inquirer
         let newShape;
         // This if statements will classify the shape and render correct classes.
         if (response.shape === 'Circle') {
-            newShape = new Circle(`${response.shape}`, `${response.shapeColor}`, `${response.text}`, `${response.textColor}`)
+            newShape = new Circle(response.shape, response.shapeColor, response.text, response.textColor)
         } else if (response.shape === 'Square') {
-            newShape = new Square(`${response.shape}`, `${response.shapeColor}`, `${response.text}`, `${response.textColor}`)
+            newShape = new Square(response.shape, response.shapeColor, response.text, response.textColor)
         } else {
-            newShape = new Triangle(`${response.shape}`, `${response.shapeColor}`, `${response.text}`, `${response.textColor}`)
+            newShape = new Triangle(response.shape, response.shapeColor, response.text, response.textColor)
         }
         // newLogo is the generic svg template with the details of the shape and text being rendered from the class's render methods.
         const newLogo = `
